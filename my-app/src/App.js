@@ -1,13 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Landing from './components/landingPage.js'
+import Navbar from './components/navbar.js'
+import Technology from './components/technologyPage.js'
+import Crew from './components/crewPage.js'
+import Destination from './components/destinationPage.js'
 
 function App() {
   return (
-    <div className="App">
-      <h1>SO YOU WANT TO TRAVEL TO</h1>
-      <h1>SPACE</h1>
-      <h1>Let’s face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, 
-        and relax because we’ll give you a truly out of this world experience!</h1>
+    <div>
+    <Navbar/>
+    <Landing/>
+    <Crew/>
+    <Destination/>
+    <Technology/>
     </div>
   );
 }
