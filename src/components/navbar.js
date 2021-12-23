@@ -2,7 +2,14 @@ import React from 'react';
 
 class Navbar extends React.Component {
     render() {
-      return <h1>Navbar</h1>;
+      return (
+      <ul>
+        <li>00 HOME</li>
+        <li>01 DESTINATION</li>
+        <li>02 CREW</li>
+        <li>03 TECHNOLOGY</li>
+      </ul>
+      )
     }
   }
 
