@@ -1,5 +1,10 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 class Navbar extends React.Component {
     render() {
@@ -12,19 +17,6 @@ class Navbar extends React.Component {
         <li>02 CREW</li>
         <li>03 TECHNOLOGY</li>
       </ul>
-
-<NavLink to="/" >
-    Home
-</NavLink>
-<NavLink to="/about" >
-    About
-</NavLink>
-<NavLink to="/contact" >
-    Contact
-</NavLink>
-<NavLink to="/signin" >
-    Sign In
-</NavLink>
         </div>
       )
     }
