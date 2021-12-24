@@ -1,9 +1,16 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core'
 
-class Landing extends React.Component {
-    render() {
+const useStyles = makeStyles({
+  div: {
+    backgroundColor: 'blue'
+  }
+})
+
+function Landing() {
+      const classes = useStyles()
+
       return (
-
         <div>
         <h1>SO, YOU WANT TO TRAVEL TO </h1>;
         <h1>SPACE</h1>
@@ -12,7 +19,6 @@ class Landing extends React.Component {
         </p>
       </div>
         )
-    }
-  }
+}
 
 export default Landing;
