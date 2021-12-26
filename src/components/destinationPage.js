@@ -1,4 +1,5 @@
 import React from 'react';
+import {Typography, Grid, Paper, Box} from '@material-ui/core'
 
 class Destination extends React.Component {
 
@@ -48,21 +49,21 @@ class Destination extends React.Component {
 
     render() {
       return (
-      <div>
-        <h1>Pick Your Destination</h1>;
-        <ul>
-          <li onClick={this.moon.bind(this)}>MOON</li>
-          <li onClick={this.mars.bind(this)}>MARS</li>
-          <li onClick={this.europa.bind(this)}>EUROPA</li>
-          <li onClick={this.titan.bind(this)}>TITAN</li>
-        </ul>
-        <h1>{this.state.title}</h1>
-        <p>{this.state.description}</p>
-        <h1>AVG. DISTANCE</h1>
-        <h1>EST. TRAVEL TIME</h1>
-        <h1>{this.state.distance}</h1>
-        <h1>{this.state.travel}</h1>
-      </div>
+      <Box>
+        <Typography variant="h1">Pick Your Destination</Typography>;
+        <Grid container spacing={4}> 
+          <Grid item xs="1" onClick={this.moon.bind(this)}>MOON</Grid>
+          <Grid item xs="1" onClick={this.mars.bind(this)}>MARS</Grid>
+          <Grid item xs="1" onClick={this.europa.bind(this)}>EUROPA</Grid>
+          <Grid item xs="1" onClick={this.titan.bind(this)}>TITAN</Grid>
+        </Grid>
+        <Typography variant="h2">{this.state.title}</Typography>
+        <Typography variant="p">{this.state.description}</Typography>
+        <Typography variant="h2">AVG. DISTANCE</Typography>
+        <Typography variant="h2">EST. TRAVEL TIME</Typography>
+        <Typography variant="h2">{this.state.distance}</Typography>
+        <Typography variant="h2">{this.state.travel}</Typography>
+      </Box>
         )
     }
   }

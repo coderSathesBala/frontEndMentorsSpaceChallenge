@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography, Button, Box } from "@material-ui/core"
 
 class Crew extends React.Component {
 
@@ -41,17 +42,16 @@ class Crew extends React.Component {
   }
     render() {
       return (
-      <div>
-        <h1>02 Meet Your Crew</h1>
-        <h1>{this.state.title}</h1>
-        <h1>{this.state.name}</h1>
-        <p>{this.state.description}</p>
-        <button type="button" onClick={this.specialist.bind(this)}>Mission Specialist</button>
-        <button type="button" onClick={this.commander.bind(this)}>Commander</button>
-        <button type="button" onClick={this.pilot.bind(this)}>Pilot</button>
-        <button type="button" onClick={this.engineer.bind(this)}>Flight Engineer</button>
-      </div>
-      
+      <Box component="span">
+        <Typography variant='h1'>02 Meet Your Crew</Typography >
+        <Typography variant='h1'>{this.state.title}</Typography >
+        <Typography variant='h1'>{this.state.name}</Typography >
+        <Typography variant='p'>{this.state.description}</Typography >
+        <Button variant="text" onClick={this.specialist.bind(this)}>Mission Specialist</Button>
+        <Button variant="text" onClick={this.commander.bind(this)}>Commander</Button>
+        <Button variant="text" onClick={this.pilot.bind(this)}>Pilot</Button>
+        <Button variant="text" onClick={this.engineer.bind(this)}>Flight Engineer</Button>
+      </Box>      
       )
     }
   }

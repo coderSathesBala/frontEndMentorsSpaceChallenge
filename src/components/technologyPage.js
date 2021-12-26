@@ -1,4 +1,5 @@
 import React from 'react';
+import {Typography, Box, Button} from '@material-ui/core'
 
 class Technology extends React.Component {
 
@@ -30,15 +31,15 @@ class Technology extends React.Component {
 
     render() {
       return (
-      <div>
-        <h1>SPACE LAUNCH 101</h1>
-        <button onClick={this.one.bind(this)}>1</button>
-        <button onClick={this.two.bind(this)}>2</button>
-        <button onClick={this.three.bind(this)}>3</button>
-        <h2>THE TERMINOLOGY...</h2>
-        <h1>{this.state.title}</h1>
-        <p>{this.state.description}</p>
-      </div>
+      <Box>
+        <Typography variant="h1">SPACE LAUNCH 101</Typography>
+        <Button onClick={this.one.bind(this)}>1</Button>
+        <Button onClick={this.two.bind(this)}>2</Button>
+        <Button onClick={this.three.bind(this)}>3</Button>
+        <Typography variant="h2">THE TERMINOLOGY...</Typography>
+        <Typography variant="h1">{this.state.title}</Typography>
+        <Typography variant="p">{this.state.description}</Typography>
+      </Box>
       )
     }
   }
