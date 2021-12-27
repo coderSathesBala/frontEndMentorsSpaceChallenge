@@ -56,7 +56,6 @@ class Destination extends React.Component {
     })
   }
 
-
     render() {
       return (
         <Box  style={{
