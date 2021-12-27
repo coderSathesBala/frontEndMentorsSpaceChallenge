@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Box} from '@material-ui/core'
+import { Typography, Box, Paper} from '@material-ui/core'
 import Image from '../images/homeImages/background-home-desktop.jpg'
 
 function Landing() {
@@ -15,6 +15,9 @@ function Landing() {
         <Typography>Let's face it: if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back,
           and relax because we'll give you a truly out of this world experience!
         </Typography>
+        <Paper variant="outlined">
+   <img src={Image} />
+</Paper>
       </Box>
         )
 }
