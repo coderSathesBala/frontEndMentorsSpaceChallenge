@@ -9,7 +9,7 @@ class Navbar extends React.Component {
   render() {
     return (
      <div>
-      <AppBar>
+      <AppBar position="sticky">
         <Toolbar>
           <Typography> <Link to="/">00 HOME</Link> </Typography> 
           <Typography> <Link to="/Destination">01 DESTINATION</Link> </Typography>
