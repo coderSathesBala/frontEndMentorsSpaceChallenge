@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Button, Box } from "@material-ui/core"
+import Image from '../images/crew/background-crew-desktop.jpg';
 
 class Crew extends React.Component {
 
@@ -42,7 +43,13 @@ class Crew extends React.Component {
   }
     render() {
       return (
-      <Box component="span">
+        <Box  style={{
+          component: "span",
+          backgroundImage: `url(${Image})`,
+          backgroundSize: "cover",
+          height: "100vh",
+          color: "#f5f5f5"
+        }}>
         <Typography variant='h1'>02 Meet Your Crew</Typography >
         <Typography variant='h1'>{this.state.title}</Typography >
         <Typography variant='h1'>{this.state.name}</Typography >

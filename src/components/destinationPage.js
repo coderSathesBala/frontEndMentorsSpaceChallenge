@@ -1,5 +1,6 @@
 import React from 'react';
 import {Typography, Grid, Paper, Box} from '@material-ui/core'
+import Image from '../images/destinationImages/background-destination-desktop.jpg';
 
 class Destination extends React.Component {
 
@@ -49,7 +50,12 @@ class Destination extends React.Component {
 
     render() {
       return (
-      <Box>
+        <Box  style={{
+          backgroundImage: `url(${Image})`,
+          backgroundSize: "cover",
+          height: "100vh",
+          color: "#f5f5f5"
+        }}>
         <Typography variant="h1">Pick Your Destination</Typography>;
         <Grid container spacing={4}> 
           <Grid item xs="1" onClick={this.moon.bind(this)}>MOON</Grid>

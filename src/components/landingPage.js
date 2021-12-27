@@ -4,11 +4,11 @@ import Image from '../images/homeImages/background-home-desktop.jpg'
 
 function Landing() {
       return (
-        <Box  style={{
-                        backgroundImage: `url(${Image})`,
-                        backgroundSize: "cover",
-                        height: "100vh",
-                        color: "#f5f5f5"
+      <Box  style={{
+            backgroundImage: `url(${Image})`,
+            backgroundSize: "cover",
+            height: "100vh",
+            color: "#f5f5f5"
         }}>
         <Typography variant="h2">SO, YOU WANT TO TRAVEL TO </Typography>
         <Typography variant="h2">SPACE</Typography>

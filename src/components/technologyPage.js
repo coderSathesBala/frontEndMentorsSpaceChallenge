@@ -1,5 +1,6 @@
 import React from 'react';
-import {Typography, Box, Button} from '@material-ui/core'
+import {Typography, Box, Button} from '@material-ui/core';
+import Image from '../images/technologyImages/background-technology-desktop.jpg';
 
 class Technology extends React.Component {
 
@@ -31,7 +32,12 @@ class Technology extends React.Component {
 
     render() {
       return (
-      <Box>
+        <Box  style={{
+          backgroundImage: `url(${Image})`,
+          backgroundSize: "cover",
+          height: "100vh",
+          color: "#f5f5f5"
+        }}>
         <Typography variant="h1">SPACE LAUNCH 101</Typography>
         <Button onClick={this.one.bind(this)}>1</Button>
         <Button onClick={this.two.bind(this)}>2</Button>
