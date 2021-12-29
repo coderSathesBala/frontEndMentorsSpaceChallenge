@@ -4,14 +4,15 @@ import Image from '../images/homeImages/background-home-desktop.jpg'
 
 function Landing() {
       return (
-      <Box  display="grid" direction="column" gridTemplateColumns="repeat(3, 1fr)" 
+      <Box  
             sx={{
+            display: 'grid',
+            gridTemplateColumns: "repeat(3, 1fr)",
             backgroundImage: `url(${Image})`,
             backgroundSize: "cover",
             height: "100vh",
             color: "#f5f5f5"
-        }}>
-        
+        }}> 
         <Box style={{paddingTop: '21rem', paddingLeft: '12rem'}}>
         <Typography variant="h2" style={{ fontSize: '1.5rem'}}>SO, YOU WANT TO TRAVEL TO </Typography>
         <Typography variant="h1" style={{ fontSize: '10rem', paddingTop: '1rem' }}>SPACE</Typography>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Typography, Grid, Paper, Box} from '@material-ui/core'
+import {Typography, Grid, Paper, Box, Button} from '@material-ui/core'
 import Image from '../images/destinationImages/background-destination-desktop.jpg';
 import Moon from '../images/destinationImages/image-moon.png'
 import Titan from '../images/destinationImages/image-titan.png'
@@ -58,26 +58,32 @@ class Destination extends React.Component {
 
     render() {
       return (
-        <Box  style={{
-          backgroundImage: `url(${Image})`,
-          backgroundSize: "cover",
-          height: "100vh",
-          color: "#f5f5f5"
-        }}>
-        <Typography variant="h1">Pick Your Destination</Typography>;
-        <Grid container spacing={4}> 
-          <Grid item xs="1" onClick={this.moon.bind(this)}>MOON</Grid>
-          <Grid item xs="1" onClick={this.mars.bind(this)}>MARS</Grid>
-          <Grid item xs="1" onClick={this.europa.bind(this)}>EUROPA</Grid>
-          <Grid item xs="1" onClick={this.titan.bind(this)}>TITAN</Grid>
-        </Grid>
+      <Box style={{
+         display: 'grid',
+         gridTemplateColumns: "repeat(2, 1fr)",
+         backgroundImage: `url(${Image})`,
+         backgroundSize: "cover",
+         height: "100vh",
+         color: "#f5f5f5"
+       }}>
+        <Box>
+          <Typography variant="h3">01 Pick Your Destination</Typography>
+           <img src={this.state.image}/>
+        </Box>
+        <Box>
+          <Box> 
+            <Button style={{color: 'white'}} onClick={this.moon.bind(this)}>MOON</Button>
+            <Button onClick={this.mars.bind(this)}>MARS</Button>
+            <Button onClick={this.europa.bind(this)}>EUROPA</Button>
+            <Button onClick={this.titan.bind(this)}>TITAN</Button>
+          </Box>
         <Typography variant="h2">{this.state.title}</Typography>
         <Typography variant="p">{this.state.description}</Typography>
         <Typography variant="h2">AVG. DISTANCE</Typography>
         <Typography variant="h2">EST. TRAVEL TIME</Typography>
         <Typography variant="h2">{this.state.distance}</Typography>
         <Typography variant="h2">{this.state.travel}</Typography>
-        <Paper variant="outlined"><img src={this.state.image}/></Paper>
+        </Box>
       </Box>
         )
     }
