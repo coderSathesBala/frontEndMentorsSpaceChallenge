@@ -43,16 +43,28 @@ class Technology extends React.Component {
           backgroundImage: `url(${Image})`,
           backgroundSize: "cover",
           height: "100vh",
-          color: "#f5f5f5"
+          color: "#f5f5f5",
+          paddingLeft: '15rem',
+          paddingTop: '8rem'
         }}>
-        <Typography variant="h1">SPACE LAUNCH 101</Typography>
-        <Button style={{backgroundColor: "#21b6ae"}} onClick={this.one.bind(this)}>1</Button>
-        <Button style={{backgroundColor: "#21b6ae"}} onClick={this.two.bind(this)}>2</Button>
-        <Button style={{backgroundColor: "#21b6ae"}} onClick={this.three.bind(this)}>3</Button>
-        <Typography variant="h2">THE TERMINOLOGY...</Typography>
-        <Typography variant="h1">{this.state.title}</Typography>
-        <Typography variant="p">{this.state.description}</Typography>
-        <Paper variant="outlined"><img src={this.state.image}/></Paper>
+        <Typography variant="h4">03 SPACE LAUNCH 101</Typography>
+          <Box style={{          
+                display: 'grid',
+                gridTemplateColumns: '0.2fr 6fr 2fr',
+                justifyContent: 'flex-end',
+                paddingTop: '5rem'}}>
+            <Box style={{paddingTop: '4rem', paddingRight: '5rem'}}>
+            <Button style={{backgroundColor: "#21b6ae"}} onClick={this.one.bind(this)}>1</Button>
+            <Button style={{backgroundColor: "#21b6ae"}} onClick={this.two.bind(this)}>2</Button>
+            <Button style={{backgroundColor: "#21b6ae"}} onClick={this.three.bind(this)}>3</Button>
+            </Box>
+            <Box style={{paddingTop: '4rem', width: '60%'}}>
+            <Typography variant="h9">THE TERMINOLOGY...</Typography>
+            <Typography variant="h2">{this.state.title}</Typography>
+            <Typography variant="h7">{this.state.description}</Typography>
+            </Box>
+            <Box><img src={this.state.image} style={{alignItems: 'end'}}/></Box>
+          </Box>
       </Box>
       )
     }

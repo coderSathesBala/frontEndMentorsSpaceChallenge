@@ -54,21 +54,27 @@ class Crew extends React.Component {
     render() {
       return (
         <Box  style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
           backgroundImage: `url(${Image})`,
           backgroundSize: "cover",
           height: "100vh",
-          color: "#f5f5f5"
+          color: "#f5f5f5",
+          alignItems: 'end',
+          paddingLeft: '9rem'
         }}>
-        <Typography variant='h1'>02 Meet Your Crew</Typography >
-        <Typography variant='h1'>{this.state.title}</Typography >
-        <Typography variant='h1'>{this.state.name}</Typography >
-        <Typography>{this.state.description}</Typography >
+          <Box style={{paddingBottom: '15rem', paddingLeft: '3rem', width: '65%'}}>
+        <Typography variant='h5'>02 Meet Your Crew</Typography >
+        <Typography variant='h3' style={{paddingTop: '6rem'}}>{this.state.title}</Typography >
+        <Typography variant='h2'>{this.state.name}</Typography >
+        <Typography style={{paddingTop: '3rem'}}>{this.state.description}</Typography >
         <Button variant="text" onClick={this.specialist.bind(this)}>Mission Specialist</Button>
         <Button variant="text" onClick={this.commander.bind(this)}>Commander</Button>
         <Button variant="text" onClick={this.pilot.bind(this)}>Pilot</Button>
         <Button variant="text" onClick={this.engineer.bind(this)}>Flight Engineer</Button>
-        <Paper variant="outlined"><img src={this.state.image}/></Paper>
-      </Box>      
+          </Box>
+            <Box><img src={this.state.image}/></Box>
+        </Box>      
       )
     }
   }
