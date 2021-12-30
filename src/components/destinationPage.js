@@ -65,7 +65,7 @@ class Destination extends React.Component {
          backgroundSize: "cover",
          height: "100vh",
          color: "#f5f5f5",
-         padding: '12rem',
+         padding: '12rem'
        }}>
         <Box>
           <Typography variant="h4">01 Pick Your Destination</Typography>
