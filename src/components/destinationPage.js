@@ -64,25 +64,32 @@ class Destination extends React.Component {
          backgroundImage: `url(${Image})`,
          backgroundSize: "cover",
          height: "100vh",
-         color: "#f5f5f5"
+         color: "#f5f5f5",
+         padding: '12rem',
        }}>
         <Box>
-          <Typography variant="h3">01 Pick Your Destination</Typography>
-           <img src={this.state.image}/>
+          <Typography variant="h4">01 Pick Your Destination</Typography>
+           <img style={{padding: '5rem'}} src={this.state.image}/>
         </Box>
         <Box>
-          <Box> 
+          <Box style={{paddingTop: '7rem'}}> 
             <Button style={{color: 'white'}} onClick={this.moon.bind(this)}>MOON</Button>
             <Button onClick={this.mars.bind(this)}>MARS</Button>
             <Button onClick={this.europa.bind(this)}>EUROPA</Button>
             <Button onClick={this.titan.bind(this)}>TITAN</Button>
           </Box>
-        <Typography variant="h2">{this.state.title}</Typography>
-        <Typography variant="p">{this.state.description}</Typography>
-        <Typography variant="h2">AVG. DISTANCE</Typography>
-        <Typography variant="h2">EST. TRAVEL TIME</Typography>
-        <Typography variant="h2">{this.state.distance}</Typography>
-        <Typography variant="h2">{this.state.travel}</Typography>
+        <Typography variant="h1">{this.state.title}</Typography>
+        <Typography style={{paddingTop: '1rem', width: '65%'}}>{this.state.description}</Typography>
+            <Box style={{
+                          display: 'grid', 
+                          gridTemplateColumns: "repeat(2, 1fr)", 
+                          paddingTop: "5rem"
+                          }}>
+              <Typography variant="h7">AVG. DISTANCE</Typography>
+              <Typography variant="h7">EST. TRAVEL TIME</Typography>
+              <Typography variant="h5">{this.state.distance}</Typography>
+              <Typography variant="h5">{this.state.travel}</Typography>
+            </Box>
         </Box>
       </Box>
         )
